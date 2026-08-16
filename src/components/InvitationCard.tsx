@@ -32,6 +32,9 @@ export const InvitationCard: React.FC<InvitationCardProps> = ({
 
   const currentCat = categoryLabels[data.category] || categoryLabels.guest;
 
+  const arabicRecipientName = data.recipientNameAr?.trim() || data.recipientName?.trim();
+  const frenchRecipientName = data.recipientNameFr?.trim() || data.recipientName?.trim();
+
   return (
     <div className="w-full flex justify-center p-1 sm:p-3 overflow-hidden">
       {/* Exact Card Canvas Matching the Model */}
@@ -133,7 +136,7 @@ export const InvitationCard: React.FC<InvitationCardProps> = ({
               </div>
 
               {/* Personalized Guest Badge (Arabic) */}
-              {data.recipientName && (
+              {arabicRecipientName && (
                 <div
                   dir="rtl"
                   className={`w-full max-w-2xl mx-auto ${
@@ -145,8 +148,8 @@ export const InvitationCard: React.FC<InvitationCardProps> = ({
                     <span className={`font-arabic font-bold ${cardLanguage === 'ar' ? 'text-xs sm:text-sm' : 'text-[11px] sm:text-xs'} text-[#005a2b] whitespace-nowrap shrink-0`}>
                       {data.recipientHonorificAr || 'السيد(ة) الفاضل(ة)'} :
                     </span>
-                    <span className={`font-arabic font-extrabold ${cardLanguage === 'ar' ? 'text-sm sm:text-lg' : 'text-xs sm:text-sm'} text-stone-950 truncate block min-w-0`} title={data.recipientName}>
-                      <bdi>{data.recipientName}</bdi>
+                    <span className={`font-arabic font-extrabold ${cardLanguage === 'ar' ? 'text-sm sm:text-lg' : 'text-xs sm:text-sm'} text-stone-950 truncate block min-w-0`} title={arabicRecipientName}>
+                      <bdi>{arabicRecipientName}</bdi>
                     </span>
                   </div>
                   <span className={`${cardLanguage === 'ar' ? 'text-xs sm:text-sm px-3 py-1' : 'text-[10px] sm:text-xs px-2.5 py-0.5'} font-arabic font-bold rounded-full bg-[#005a2b] text-amber-200 shadow-xs shrink-0 whitespace-nowrap`}>
@@ -303,7 +306,7 @@ export const InvitationCard: React.FC<InvitationCardProps> = ({
               </div>
 
               {/* Personalized Guest Line (French) */}
-              {data.recipientName && (
+              {frenchRecipientName && (
                 <div
                   className={`w-full max-w-2xl mx-auto ${
                     cardLanguage === 'fr' ? 'my-3 px-4 py-2.5' : 'my-1.5 px-3 py-1.5'
@@ -314,8 +317,8 @@ export const InvitationCard: React.FC<InvitationCardProps> = ({
                     <span className={`font-bold ${cardLanguage === 'fr' ? 'text-xs sm:text-sm' : 'text-[11px] sm:text-xs'} text-[#005a2b] whitespace-nowrap shrink-0`}>
                       {data.recipientHonorificFr || 'M./Mme'} :
                     </span>
-                    <span className={`font-extrabold ${cardLanguage === 'fr' ? 'text-sm sm:text-lg' : 'text-xs sm:text-sm'} text-stone-950 truncate block min-w-0`} title={data.recipientName}>
-                      {data.recipientName}
+                    <span className={`font-extrabold ${cardLanguage === 'fr' ? 'text-sm sm:text-lg' : 'text-xs sm:text-sm'} text-stone-950 truncate block min-w-0`} title={frenchRecipientName}>
+                      {frenchRecipientName}
                     </span>
                   </div>
                   <span className={`${cardLanguage === 'fr' ? 'text-xs sm:text-sm px-3 py-1' : 'text-[10px] sm:text-xs px-2.5 py-0.5'} font-bold rounded-full bg-[#005a2b] text-amber-200 shrink-0 whitespace-nowrap`}>

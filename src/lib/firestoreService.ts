@@ -96,6 +96,8 @@ export function useCloudInvitations(initialLocalInvitations: InvitationCardData[
       const docRef = doc(db, INVITATIONS_COLLECTION, invitation.id);
       await setDoc(docRef, {
         recipientName: invitation.recipientName,
+        recipientNameFr: invitation.recipientNameFr || invitation.recipientName || '',
+        recipientNameAr: invitation.recipientNameAr || invitation.recipientName || '',
         recipientHonorificFr: invitation.recipientHonorificFr,
         recipientHonorificAr: invitation.recipientHonorificAr,
         whatsappPhone: invitation.whatsappPhone,
@@ -104,10 +106,51 @@ export function useCloudInvitations(initialLocalInvitations: InvitationCardData[
         notes: invitation.notes || '',
         createdAt: invitation.createdAt,
         invitationCode: invitation.invitationCode,
+        checkedIn: invitation.checkedIn || false,
+        checkedInAt: invitation.checkedInAt || null,
+        checkedInBy: invitation.checkedInBy || null,
       });
       setIsCloudConnected(true);
     } catch (err) {
       console.error('Failed to save invitation to Firestore:', err);
+    }
+  };
+
+  const checkInInvitation = async (id: string, checkedIn: boolean = true, operatorName: string = 'Organisateur') => {
+    const timestamp = new Date().toISOString();
+    const updated = invitations.map((inv) =>
+      inv.id === id
+        ? {
+            ...inv,
+            checkedIn,
+            checkedInAt: checkedIn ? timestamp : undefined,
+            checkedInBy: checkedIn ? operatorName : undefined,
+          }
+        : inv
+    );
+
+    setInvitations(updated);
+    try {
+      localStorage.setItem('hassi_bekay_invitations_list', JSON.stringify(updated));
+    } catch (e) {
+      // ignore
+    }
+
+    try {
+      await ensureAuthenticated();
+      const docRef = doc(db, INVITATIONS_COLLECTION, id);
+      await setDoc(
+        docRef,
+        {
+          checkedIn,
+          checkedInAt: checkedIn ? timestamp : null,
+          checkedInBy: checkedIn ? operatorName : null,
+        },
+        { merge: true }
+      );
+      setIsCloudConnected(true);
+    } catch (err) {
+      console.warn('Check-in saved locally, offline Firestore sync pending:', err);
     }
   };
 
@@ -136,6 +179,7 @@ export function useCloudInvitations(initialLocalInvitations: InvitationCardData[
     invitations,
     setInvitations,
     saveInvitation,
+    checkInInvitation,
     removeInvitation,
     loading,
     isCloudConnected,

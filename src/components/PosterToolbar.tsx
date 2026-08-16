@@ -1,5 +1,6 @@
 import React from 'react';
 import { PosterFormat, LanguageMode, ColorTheme, DisplayMode } from '../types';
+import { SyncStatusBadge } from './SyncStatusBadge';
 import {
   Smartphone,
   Layout,
@@ -55,19 +56,22 @@ export const PosterToolbar: React.FC<PosterToolbarProps> = ({
   return (
     <nav className="sticky top-0 z-40 w-full bg-stone-950/95 border-b border-amber-400/30 backdrop-blur-md px-3 sm:px-6 py-2.5 shadow-lg no-print">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-        {/* Left: Branding & Tag */}
+        {/* Left: Branding & Tag & Firebase Sync Status */}
         <div className="flex items-center gap-3">
           <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-900 border border-amber-400/50 text-amber-300 font-bold text-sm shadow">
             🇲🇷
           </div>
           <div>
-            <h1 className="text-xs sm:text-sm font-extrabold text-white tracking-wide">
-              AFFICHE OFFICIELLE 2026 • الملصق الرسمي
-            </h1>
+            <div className="flex items-center gap-2">
+              <h1 className="text-xs sm:text-sm font-extrabold text-white tracking-wide">
+                AFFICHE OFFICIELLE 2026 • الملصق الرسمي
+              </h1>
+            </div>
             <p className="text-[11px] text-amber-300 font-arabic">
               النسخة الثالثة — حاسي البكاي (كيفة، لعصابه)
             </p>
           </div>
+          <SyncStatusBadge className="hidden lg:inline-block" />
         </div>
 
         {/* Center: Controls for Format, Language, Day/Night & Confetti */}

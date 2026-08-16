@@ -64,6 +64,8 @@ export type InvitationCategory = 'vip' | 'guest' | 'resident' | 'volunteer' | 'y
 export interface InvitationCardData {
   id: string;
   recipientName: string;
+  recipientNameFr?: string;
+  recipientNameAr?: string;
   recipientHonorificFr: string;
   recipientHonorificAr: string;
   whatsappPhone: string;
@@ -72,4 +74,7 @@ export interface InvitationCardData {
   notes?: string;
   createdAt: string;
   invitationCode: string;
+  checkedIn?: boolean;
+  checkedInAt?: string;
+  checkedInBy?: string;
 }
