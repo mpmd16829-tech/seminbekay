@@ -1,0 +1,7 @@
+{
+  "name": "Affiche Semaine Culturelle et Sportive Hassi El Bakaï 2026",
+  "description": "Affiche officielle interactive et générateur de cartes d'invitation bilingues (FR/AR) avec envoi direct par WhatsApp et QR Pass pour la 3e édition de la Semaine culturelle et sportive de Hassi El Bakaï (Kiffa, Assaba, Mauritanie).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

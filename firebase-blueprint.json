@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "invitations": {
+      "title": "Invitations",
+      "description": "Festival attendee invitations and VIP passes",
+      "type": "object",
+      "properties": {
+        "recipientName": { "type": "string" },
+        "recipientHonorificFr": { "type": "string" },
+        "recipientHonorificAr": { "type": "string" },
+        "whatsappPhone": { "type": "string" },
+        "category": { "type": "string" },
+        "seatZone": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "invitationCode": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["recipientName", "invitationCode", "createdAt"]
+    },
+    "guestbook": {
+      "title": "Guestbook Signatures",
+      "description": "Signatures and messages from festival participants",
+      "type": "object",
+      "properties": {
+        "authorName": { "type": "string" },
+        "village": { "type": "string" },
+        "message": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["authorName", "message", "createdAt"]
+    }
+  },
+  "rules": [
+    {
+      "collection": "invitations",
+      "read": "true",
+      "write": "true"
+    },
+    {
+      "collection": "guestbook",
+      "read": "true",
+      "write": "true"
+    }
+  ]
+}
