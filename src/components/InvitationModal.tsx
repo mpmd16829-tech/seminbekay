@@ -78,7 +78,7 @@ const SAMPLE_INVITATIONS: InvitationCardData[] = [
 export const InvitationModal: React.FC<InvitationModalProps> = ({ isOpen, onClose }) => {
   const getInitialList = (): InvitationCardData[] => {
     try {
-      const saved = localStorage.getItem('hassi_bakai_invitations_list');
+      const saved = localStorage.getItem('hassi_bekay_invitations_list') || localStorage.getItem('hassi_bakai_invitations_list');
       if (saved) {
         return JSON.parse(saved);
       }

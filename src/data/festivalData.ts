@@ -5,7 +5,7 @@ export const FESTIVAL_INFO = {
   editionAr: "النسخة الثالثة",
   titleFr: "SEMAINE CULTURELLE ET SPORTIVE 2026",
   titleAr: "الأسبوع الثقافي والرياضي 2026",
-  locationFr: "Hassi El Bakaï — Kiffa, Wilaya de l’Assaba, Mauritanie",
+  locationFr: "Hassi El Bekay — Kiffa, Wilaya de l’Assaba, Mauritanie",
   locationAr: "حاسي البكاي — كيفة، ولاية لعصابه، موريتانيا",
   datesFr: "Du 28 août au 2 septembre 2026",
   datesAr: "من 28 أغسطس إلى 2 سبتمبر 2026",
@@ -122,7 +122,7 @@ export const FESTIVAL_ACTIVITIES: FestivalActivity[] = [
     titleAr: "يوم النظافة والتطوع وحماية البيئة",
     categoryFr: "Écologie & Volontariat",
     categoryAr: "البيئة والعمل التطوعي",
-    descFr: "Opération éco-citoyenne de salubrité à Hassi El Bakaï, plantation d'arbres d'ombrage et gestion des déchets.",
+    descFr: "Opération éco-citoyenne de salubrité à Hassi El Bekay, plantation d'arbres d'ombrage et gestion des déchets.",
     descAr: "حملة تنظيف كبرى في شوارع وفضاءات حاسي البكاي، غرس أشجار الظل والتوعية بحماية البيئة المحلية.",
     iconName: "Leaf",
     badgeFr: "Eco-citoyenneté",
@@ -162,7 +162,7 @@ export const FESTIVAL_DAYS_SCHEDULE: DayProgram[] = [
         time: "16:00",
         titleFr: "Grande cérémonie d'ouverture officielle & Accueil des délégations",
         titleAr: "حفل الافتتاح الرسمي واستقبال الوفود ووجهاء المنطقة",
-        locationFr: "Tribune Centrale de Hassi El Bakaï",
+        locationFr: "Tribune Centrale de Hassi El Bekay",
         locationAr: "المنصة الرئيسية بحاسي البكاي",
         type: "culture"
       },
@@ -170,7 +170,7 @@ export const FESTIVAL_DAYS_SCHEDULE: DayProgram[] = [
         time: "17:30",
         titleFr: "Coup d'envoi du tournoi de Football (Match d'ouverture)",
         titleAr: "انطلاق بطولة كرة القدم (المباراة الافتتاحية)",
-        locationFr: "Terrain municipal de Hassi El Bakaï",
+        locationFr: "Terrain municipal de Hassi El Bekay",
         locationAr: "الملعب البلدي بحاسي البكاي",
         type: "sport"
       },
@@ -242,7 +242,7 @@ export const FESTIVAL_DAYS_SCHEDULE: DayProgram[] = [
     events: [
       {
         time: "07:00",
-        titleFr: "Grande journée d'assainissement et reboisement dans tout Hassi El Bakaï",
+        titleFr: "Grande journée d'assainissement et reboisement dans tout Hassi El Bekay",
         titleAr: "حملة النظافة الكبرى وغرس الأشجار في أرجاء حاسي البكاي",
         locationFr: "Tous les quartiers de la localité",
         locationAr: "كافة أحياء وساحات القرية",
@@ -342,7 +342,7 @@ export const FESTIVAL_DAYS_SCHEDULE: DayProgram[] = [
         time: "21:00",
         titleFr: "Grande veillée spirituelle et Nuit du Madih Prophétique",
         titleAr: "ليلة المديح النبوي الشريف والقصائد الصوفية العذبة",
-        locationFr: "Grande Place de Hassi El Bakaï",
+        locationFr: "Grande Place de Hassi El Bekay",
         locationAr: "الساحة الكبرى بحاسي البكاي",
         type: "culture"
       }
@@ -357,7 +357,7 @@ export const FESTIVAL_DAYS_SCHEDULE: DayProgram[] = [
     events: [
       {
         time: "16:00",
-        titleFr: "Grande Finale du Tournoi de Football de Hassi El Bakaï 2026",
+        titleFr: "Grande Finale du Tournoi de Football de Hassi El Bekay 2026",
         titleAr: "النهائي الحاسم لكأس الأسبوع الرياضي لكرة القدم 2026",
         locationFr: "Terrain municipal",
         locationAr: "الملعب البلدي",
@@ -447,14 +447,14 @@ export const INVITATION_CARD_OFFICIAL_DATA = {
   },
   fr: {
     badge: "Invitation",
-    orgName: "La Coordination Générale pour le Développement du Regroupement Villageois de Hssey El-Bekay",
+    orgName: "La Coordination Générale pour le Développement du Regroupement Villageois de Hassi El Bekay",
     honorificIntro: "A l'honneur de vous inviter à la",
     editionNumber: "3ème",
     eventTitle: "édition de la semaine culturelle et sportive",
-    beneficiaries: "Au profit des habitants des villages de Hssey El-Bekay, Egueni Radana, Tahmira, Kilomètre 10, Ribat, Ghila, Gharada et les villages Voisins",
+    beneficiaries: "Au profit des habitants des villages de Hassi El Bekay, Egueni Radana, Tahmira, Kilomètre 10, Ribat, Ghila, Gharada et les villages Voisins",
     slogan: "Sous le slogan : Faire revivre le patrimoine garantit un développement durable.",
     dateTime: "Le 28 août 2026\nA partir de 19 heure",
-    location: "A Hssey El-Bekay\nKiffa / Assaba"
+    location: "A Hassi El Bekay\nKiffa / Assaba"
   }
 };
 
@@ -467,7 +467,7 @@ export const generateWhatsAppInvitationMessage = (
 ) => {
   return `✨ *بطاقة دعوة رسمية — CARTE D'INVITATION OFFICIELLE* ✨
 🇲🇷 *النسخة الثالثة من الأسبوع الثقافي والرياضي 2026*
-*3ème Édition de la Semaine Culturelle et Sportive — Hssey El-Bekay*
+*3ème Édition de la Semaine Culturelle et Sportive — Hassi El Bekay*
 
 ━━━━━━━━━━━━━━━━━━━━━━━━
 👤 *المدعو(ة) الكريم(ة) / Invité(e) d'honneur :*
@@ -479,7 +479,7 @@ export const generateWhatsAppInvitationMessage = (
 
 🏛️ *الجهة المنظمة / Organisation :*
 • المنسقية العامة لتنمية تجمع قرى أحسي البكاي
-• La Coordination Générale pour le Développement du Regroupement Villageois de Hssey El-Bekay
+• La Coordination Générale pour le Développement du Regroupement Villageois de Hassi El Bekay
 
 🌟 *الشعار / Slogan :*
 « بإحياء التراث نضمن تنمية مستدامة »
@@ -491,7 +491,7 @@ Vendredi 28 Août 2026 à partir de 19h00
 
 📍 *المكان / Lieu :*
 حاسي البكاي — كيفة، ولاية لعصابه (موريتانيا)
-Hssey El-Bekay — Kiffa / Assaba
+Hassi El Bekay — Kiffa / Assaba
 
 📌 *ملاحظة هامة / Important :*
 يرجى إبراز هذه البطاقة أو رمز الدخول (*${invitationCode}*) عند مدخل المهرجان.
@@ -503,7 +503,7 @@ Soyez les très bienvenus !`;
 
 export const SHARE_TEMPLATES = {
   whatsappText: `🇲🇷 *SEMAINE CULTURELLE ET SPORTIVE 2026 — 3e Édition*
-📍 *Hassi El Bakaï — Kiffa, Wilaya de l’Assaba (Mauritanie)*
+📍 *Hassi El Bekay — Kiffa, Wilaya de l’Assaba (Mauritanie)*
 📅 *Du 28 août au 2 septembre 2026*
 
 *الأسبوع الثقافي والرياضي 2026 — النسخة الثالثة*

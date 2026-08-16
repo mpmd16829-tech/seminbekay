@@ -13,22 +13,33 @@ export const db = firebaseConfig.firestoreDatabaseId && firebaseConfig.firestore
 
 export const auth = getAuth(app);
 
-// Helper for ensuring anonymous authentication so requests are authenticated
+// Helper for optional authentication (graceful when anonymous auth is not enabled in Firebase project)
 export const ensureAuthenticated = async (): Promise<User | null> => {
   return new Promise((resolve) => {
-    onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        resolve(user);
-      } else {
-        try {
-          const cred = await signInAnonymously(auth);
-          resolve(cred.user);
-        } catch (error) {
-          console.error('Anonymous auth error:', error);
-          resolve(null);
-        }
+    try {
+      const currentUser = auth.currentUser;
+      if (currentUser) {
+        resolve(currentUser);
+        return;
       }
-    });
+
+      const unsubscribe = onAuthStateChanged(auth, async (user) => {
+        unsubscribe();
+        if (user) {
+          resolve(user);
+        } else {
+          try {
+            const cred = await signInAnonymously(auth);
+            resolve(cred.user);
+          } catch (error) {
+            // Anonymous sign-in may be restricted/disabled in Firebase Console; continue gracefully in unauthenticated/public mode
+            resolve(null);
+          }
+        }
+      });
+    } catch {
+      resolve(null);
+    }
   });
 };
 

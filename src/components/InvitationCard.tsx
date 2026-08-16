@@ -395,7 +395,7 @@ export const InvitationCard: React.FC<InvitationCardProps> = ({
                     <MapPin className="w-3.5 h-3.5" />
                   </div>
                   <div className="text-[10px] sm:text-xs leading-tight">
-                    <p className="font-bold text-[#005a2b]">A Hssey El-Bekay</p>
+                    <p className="font-bold text-[#005a2b]">A Hassi El Bekay</p>
                     <p className="text-stone-600">Kiffa / Assaba</p>
                   </div>
                 </div>
@@ -405,7 +405,7 @@ export const InvitationCard: React.FC<InvitationCardProps> = ({
 
           {/* Bottom Micro Footer */}
           <div className="w-full text-center mt-2 pt-1 border-t border-[#c99837]/30 text-[9px] sm:text-[10px] text-stone-500 font-medium flex items-center justify-between px-2">
-            <span>Coordination Générale pour le Développement • Hssey El-Bekay</span>
+            <span>Coordination Générale pour le Développement • Hassi El Bekay</span>
             <span dir="rtl" className="font-arabic font-bold text-[#005a2b]">
               حاسي البكاي — كيفة (28 أغسطس – 2 سبتمبر 2026)
             </span>

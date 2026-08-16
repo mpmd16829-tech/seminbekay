@@ -24,7 +24,7 @@ export const PosterBorder: React.FC<PosterBorderProps> = ({ variant = 'top' }) =
         
         <div className="flex items-center space-x-3 rtl:space-x-reverse text-[11px] uppercase tracking-widest text-amber-300 font-medium">
           <span>🇲🇷</span>
-          <span className="hidden sm:inline">Hassi El Bakaï • Kiffa • Assaba</span>
+          <span className="hidden sm:inline">Hassi El Bekay • Kiffa • Assaba</span>
           <span className="text-amber-400">★ ☽ ★</span>
           <span className="hidden sm:inline" dir="rtl">حاسي البكاي • كيفة • لعصابه</span>
           <span>🇲🇷</span>

@@ -70,7 +70,7 @@ export default function App() {
             <div className="flex items-center gap-2">
               <span className="p-1 rounded bg-emerald-500/20 text-emerald-300">🇲🇷</span>
               <span className={`font-semibold ${displayMode === 'day' ? 'text-emerald-950' : 'text-emerald-200'}`}>
-                Semaine Culturelle & Sportive 2026 — 3e Édition | Hassi El Bakaï (Kiffa, Assaba)
+                Semaine Culturelle & Sportive 2026 — 3e Édition | Hassi El Bekay (Kiffa, Assaba)
               </span>
             </div>
             <div className="flex items-center gap-3">

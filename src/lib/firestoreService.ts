@@ -50,7 +50,7 @@ export function useCloudInvitations(initialLocalInvitations: InvitationCardData[
               }));
               setInvitations(cloudItems);
               try {
-                localStorage.setItem('hassi_bakai_invitations_list', JSON.stringify(cloudItems));
+                localStorage.setItem('hassi_bekay_invitations_list', JSON.stringify(cloudItems));
               } catch (e) {
                 // ignore
               }
@@ -83,7 +83,7 @@ export function useCloudInvitations(initialLocalInvitations: InvitationCardData[
     setInvitations((prev) => [invitation, ...prev.filter((i) => i.id !== invitation.id)]);
     try {
       localStorage.setItem(
-        'hassi_bakai_invitations_list',
+        'hassi_bekay_invitations_list',
         JSON.stringify([invitation, ...invitations.filter((i) => i.id !== invitation.id)])
       );
     } catch (e) {
@@ -116,7 +116,7 @@ export function useCloudInvitations(initialLocalInvitations: InvitationCardData[
     setInvitations((prev) => prev.filter((i) => i.id !== id));
     try {
       localStorage.setItem(
-        'hassi_bakai_invitations_list',
+        'hassi_bekay_invitations_list',
         JSON.stringify(invitations.filter((i) => i.id !== id))
       );
     } catch (e) {

@@ -80,7 +80,7 @@ export const PosterHeader: React.FC<PosterHeaderProps> = ({
           <div className="text-center leading-tight">
             {langMode !== 'ar-focus' && (
               <p className={`font-bold tracking-wide ${isLight ? 'text-stone-900' : 'text-white'}`}>
-                Hassi El Bakaï — Kiffa <span className={isLight ? 'text-emerald-800 font-medium' : 'text-amber-300 font-normal'}>(Wilaya de l’Assaba)</span>
+                Hassi El Bekay — Kiffa <span className={isLight ? 'text-emerald-800 font-medium' : 'text-amber-300 font-normal'}>(Wilaya de l’Assaba)</span>
               </p>
             )}
             {langMode !== 'fr-focus' && (

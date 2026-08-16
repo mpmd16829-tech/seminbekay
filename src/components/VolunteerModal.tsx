@@ -15,7 +15,7 @@ export const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose,
   const { addMessage, isCloudConnected } = useCloudGuestbook();
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [village, setVillage] = useState('Hassi El Bakaï');
+  const [village, setVillage] = useState('Hassi El Bekay');
   const [selectedCommittee, setSelectedCommittee] = useState(FESTIVAL_COMMITTEES[0].id);
   const [proposal, setProposal] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -134,7 +134,7 @@ export const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose,
                     type="text"
                     value={village}
                     onChange={(e) => setVillage(e.target.value)}
-                    placeholder="Ex: Hassi El Bakaï, Kiffa..."
+                    placeholder="Ex: Hassi El Bekay, Kiffa..."
                     className="w-full px-3 py-2 rounded-xl bg-stone-950 border border-stone-700 text-white text-sm focus:outline-none focus:border-amber-400"
                   />
                 </div>

@@ -47,7 +47,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       });
 
       const link = document.createElement('a');
-      link.download = `Affiche_Semaine_Culturelle_Hassi_Bakai_2026.png`;
+      link.download = `Affiche_Semaine_Culturelle_Hassi_Bekay_2026.png`;
       link.href = dataUrl;
       link.click();
     } catch (err) {

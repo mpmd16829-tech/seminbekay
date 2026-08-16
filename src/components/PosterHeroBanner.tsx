@@ -23,7 +23,7 @@ export const PosterHeroBanner: React.FC<PosterHeroBannerProps> = ({ langMode, on
         <div className="relative h-60 sm:h-80 md:h-96 w-full overflow-hidden">
           <img
             src={currentImg}
-            alt="Semaine culturelle et sportive Hassi El Bakaï Kiffa Assaba"
+            alt="Semaine culturelle et sportive Hassi El Bekay Kiffa Assaba"
             className="w-full h-full object-cover object-center transform group-hover:scale-102 transition-transform duration-700 ease-out"
             referrerPolicy="no-referrer"
           />
